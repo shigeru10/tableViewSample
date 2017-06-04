@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B605ED871EE409B400311CFD /* sampleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B605ED851EE409B400311CFD /* sampleTableViewCell.swift */; };
+		B605ED881EE409B400311CFD /* sampleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B605ED861EE409B400311CFD /* sampleTableViewCell.xib */; };
+		B605ED8A1EE40E8300311CFD /* cellImage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B605ED891EE40E8300311CFD /* cellImage.jpg */; };
 		B6B1D3571EE27E1C00BCDD14 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B1D3561EE27E1C00BCDD14 /* AppDelegate.swift */; };
 		B6B1D3591EE27E1C00BCDD14 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B1D3581EE27E1C00BCDD14 /* ViewController.swift */; };
 		B6B1D35C1EE27E1C00BCDD14 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6B1D35A1EE27E1C00BCDD14 /* Main.storyboard */; };
@@ -16,6 +19,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B605ED851EE409B400311CFD /* sampleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = sampleTableViewCell.swift; sourceTree = "<group>"; };
+		B605ED861EE409B400311CFD /* sampleTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = sampleTableViewCell.xib; sourceTree = "<group>"; };
+		B605ED891EE40E8300311CFD /* cellImage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cellImage.jpg; sourceTree = "<group>"; };
 		B6B1D3531EE27E1C00BCDD14 /* tableViewSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tableViewSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6B1D3561EE27E1C00BCDD14 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B6B1D3581EE27E1C00BCDD14 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -56,9 +62,12 @@
 		B6B1D3551EE27E1C00BCDD14 /* tableViewSample */ = {
 			isa = PBXGroup;
 			children = (
+				B605ED891EE40E8300311CFD /* cellImage.jpg */,
 				B6B1D3561EE27E1C00BCDD14 /* AppDelegate.swift */,
 				B6B1D3581EE27E1C00BCDD14 /* ViewController.swift */,
 				B6B1D35A1EE27E1C00BCDD14 /* Main.storyboard */,
+				B605ED851EE409B400311CFD /* sampleTableViewCell.swift */,
+				B605ED861EE409B400311CFD /* sampleTableViewCell.xib */,
 				B6B1D3601EE27E1C00BCDD14 /* Assets.xcassets */,
 				B6B1D3621EE27E1C00BCDD14 /* LaunchScreen.storyboard */,
 				B6B1D3651EE27E1C00BCDD14 /* Info.plist */,
@@ -128,7 +137,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				B6B1D3641EE27E1C00BCDD14 /* LaunchScreen.storyboard in Resources */,
+				B605ED881EE409B400311CFD /* sampleTableViewCell.xib in Resources */,
 				B6B1D3611EE27E1C00BCDD14 /* Assets.xcassets in Resources */,
+				B605ED8A1EE40E8300311CFD /* cellImage.jpg in Resources */,
 				B6B1D35C1EE27E1C00BCDD14 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -141,6 +152,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B6B1D3591EE27E1C00BCDD14 /* ViewController.swift in Sources */,
+				B605ED871EE409B400311CFD /* sampleTableViewCell.swift in Sources */,
 				B6B1D3571EE27E1C00BCDD14 /* AppDelegate.swift in Sources */,
 				B6B1D35F1EE27E1C00BCDD14 /* tableViewSample.xcdatamodeld in Sources */,
 			);
@@ -308,6 +320,7 @@
 				B6B1D36A1EE27E1C00BCDD14 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
