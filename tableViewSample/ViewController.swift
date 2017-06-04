@@ -13,7 +13,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     private let myiPhoneItems: NSArray = ["iOS9", "iOS8", "iOS7", "iOS6", "iOS5", "iOS4"]
     private let myAndroidItems: NSArray = ["5.x", "4.x", "3.x", "2.x"]
     
-    private let mySections: NSArray = ["iPhone", "Android"]
+    private let mySections: NSArray = ["iPhone", "Android", "others"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +25,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         let myTableView: UITableView = UITableView(frame: CGRect(x: 0, y: barHeight, width: displayWidth, height: displayHeight - barHeight))
         
+        myTableView.register(UINib(nibName: "sampleTableViewCell", bundle: nil), forCellReuseIdentifier: "MyCustomCell")
         myTableView.register(UITableViewCell.self, forCellReuseIdentifier: "MyCell")
         
         myTableView.dataSource = self
@@ -61,6 +62,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             return myiPhoneItems.count
         } else if section == 1 {
             return myAndroidItems.count
+        } else if section == 2 {
+            return 2
         } else {
             return 0
         }
@@ -68,15 +71,19 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "MyCell", for: indexPath)
-        
-        if indexPath.section == 0 {
+        switch indexPath.section {
+        case 0:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "MyCell", for: indexPath)
             cell.textLabel?.text = String(describing: myiPhoneItems[indexPath.row])
-        } else if indexPath.section == 1 {
+            return cell
+        case 1:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "MyCell", for: indexPath)
             cell.textLabel?.text = String(describing: myAndroidItems[indexPath.row])
+            return cell
+        default:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "MyCustomCell", for: indexPath) as! sampleTableViewCell
+            return cell
         }
-        
-        return cell
     }
     
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
